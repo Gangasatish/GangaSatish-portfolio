@@ -1,0 +1,240 @@
+/* Main Layout & Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  display: block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--hero-gradient);
+  border-radius: 2px;
+}
+
+/* Glassmorphism Card Wrapper */
+.card-glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content {
+  flex: 1;
+  z-index: 2;
+}
+
+.hero-name {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  background: var(--hero-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title {
+  font-size: 2rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.typing-container {
+  font-size: 1.5rem;
+  height: 2rem;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.hero-buttons {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--hero-gradient);
+  color: white;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-img-placeholder {
+  width: 400px;
+  height: 400px;
+  background: var(--card-bg);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: blob-animate 8s infinite ease-in-out;
+  border: 2px solid var(--card-border);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes blob-animate {
+  0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+}
+
+/* Grid-based layouts */
+.grid-6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Skill Cards */
+.skill-card {
+  text-align: center;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-icon-placeholder {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+/* Project Cards */
+.project-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.project-img-placeholder {
+  width: 100%;
+  height: 200px;
+  background: var(--text-muted);
+  opacity: 0.2;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img-placeholder {
+  transform: scale(1.1);
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tag {
+  font-size: 0.8rem;
+  background: rgba(var(--accent-color-rgb), 0.1);
+  color: var(--accent-color);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+/* CTA Section */
+.cta {
+  background: var(--hero-gradient);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+  border-radius: var(--border-radius-lg);
+  margin: 4rem 0;
+}
+
+.cta h2 { color: white; }
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-buttons { justify-content: center; }
+  .hero-name { font-size: 3rem; }
+}
+
+/* Scroll Reveal Initial States */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Developer Portfolio | Home</title>
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Ionicons for placeholders -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+
+    <!-- Mock Navigation for theme toggle demonstration -->
+    <nav style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <button id="theme-toggle" class="card-glass" style="padding: 10px; border-radius: 50%; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;">
+            <ion-icon name="moon-outline" id="theme-icon"></ion-icon>
+        </button>
+    </nav>
+
+    <main>
+        <!-- SECTION 1: HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-name">Portfolio Name</h1>
+                <h2 class="hero-title">Developer Title</h2>
+                <div class="typing-container">
+                    <span id="typing-text"></span><span class="cursor">|</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#" class="btn btn-secondary">Download Resume</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-img-placeholder">
+                    <!-- Placeholder SVG or Illustration -->
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 80%; height: 80%;">
+                        <path fill="var(--accent-color)" d="M44.7,-76.4C58.1,-69.2,69.2,-58.1,76.4,-44.7C83.7,-31.3,87.1,-15.7,85.1,-0.1C83.2,15.4,75.9,30.8,66.1,44.2C56.4,57.7,44.1,69.2,30,75.3C15.9,81.3,-0.1,82,,-15.8,78.2C-31.4,74.4,-46.8,66.2,-59.4,54C-72,41.8,-81.7,25.6,-85.1,8.3C-88.5,-9.1,-85.5,-27.5,-76.4,-42.6C-67.4,-57.7,-52.3,-69.6,-37,-75.8C-21.7,-82.1,-6.1,-82.7,10.6,-80.9C27.3,-79.1,44.7,-76.4,44.7,-76.4Z" transform="translate(100 100)" style="opacity: 0.6;"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- SECTION 2: ABOUT PREVIEW -->
+            <section id="about" class="section reveal">
+                <h2 class="section-title">About Me</h2>
+                <div class="card-glass">
+                    <p>Placeholder paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <br>
+                    <a href="/about" class="btn btn-secondary">Read More</a>
+                </div>
+            </section>
+
+            <!-- SECTION 3: SKILLS PREVIEW -->
+            <section id="skills" class="section reveal">
+                <h2 class="section-title">My Skills</h2>
+                <div class="grid-6">
+                    <div class="card-glass skill-card">
+                        <ion-icon name="logo-javascript" class="skill-icon-placeholder"></ion-icon>
+                        <p>Skill 1</p>
+                    </div>
+                    <div class="card-glass skill-card">
+                        <ion-icon name="logo-react" class="skill-icon-placeholder"></ion-icon>
+                        <p>Skill 2</p>
+                    </div>
+                    <div class="card-glass skill-card">
+                        <ion-icon name="logo-nodejs" class="skill-icon-placeholder"></ion-icon>
+                        <p>Skill 3</p>
+                    </div>
+                    <div class="card-glass skill-card">
+                        <ion-icon name="logo-python" class="skill-icon-placeholder"></ion-icon>
+                        <p>Skill 4</p>
+                    </div>
+                    <div class="card-glass skill-card">
+                        <ion-icon name="logo-html5" class="skill-icon-placeholder"></ion-icon>
+                        <p>Skill 5</p>
+                    </div>
+                    <div class="card-glass skill-card">
+                        <ion-icon name="logo-css3" class="skill-icon-placeholder"></ion-icon>
+                        <p>Skill 6</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="/skills" class="btn btn-secondary">View All Skills</a>
+                </div>
+            </section>
+
+            <!-- SECTION 4: FEATURED PROJECTS -->
+            <section id="projects" class="section reveal">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="grid-3">
+                    <div class="card-glass project-card">
+                        <div class="project-img-placeholder"></div>
+                        <div class="project-info">
+                            <h3>Project Title</h3>
+                            <p>Short description placeholder of the project features.</p>
+                            <div class="tag-list">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                            </div>
+                            <div class="hero-buttons">
+                                <a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem;">Live Demo</a>
+                                <a href="#" class="btn btn-secondary" style="padding: 0.5rem 1rem;">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicate for more projects -->
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="/project" class="btn btn-secondary">View All Projects</a>
+                </div>
+            </section>
+
+            <!-- SECTION 5: EDUCATION PREVIEW -->
+            <section id="education" class="section reveal">
+                <h2 class="section-title">Education</h2>
+                <div class="card-glass">
+                    <h3>Degree Name Placeholder</h3>
+                    <p>University Name | Year - Year</p>
+                    <br>
+                    <a href="/education" class="btn btn-secondary">View Education</a>
+                </div>
+            </section>
+
+            <!-- SECTION 6: CERTIFICATES PREVIEW -->
+            <section id="certificates" class="section reveal">
+                <h2 class="section-title">Certificates</h2>
+                <div class="grid-3">
+                    <div class="card-glass">
+                        <h3>Certificate Title</h3>
+                        <p>Issuing Organization | Year</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="/certificates" class="btn btn-secondary">View Certificates</a>
+                </div>
+            </section>
+
+            <!-- SECTION 7: ACHIEVEMENTS PREVIEW -->
+            <section id="achievements" class="section reveal">
+                <h2 class="section-title">Achievements</h2>
+                <div class="card-glass">
+                    <p>Achievement description placeholder text.</p>
+                    <br>
+                    <a href="/achievements" class="btn btn-secondary">View Achievements</a>
+                </div>
+            </section>
+
+            <!-- SECTION 8: TRAININGS PREVIEW -->
+            <section id="trainings" class="section reveal">
+                <h2 class="section-title">Trainings</h2>
+                <div class="card-glass">
+                    <h3>Training Title</h3>
+                    <p>Provider Name</p>
+                    <p>Brief training description.</p>
+                    <br>
+                    <a href="/trainings" class="btn btn-secondary">View Trainings</a>
+                </div>
+            </section>
+
+            <!-- SECTION 9: CALL TO ACTION -->
+            <section class="cta reveal">
+                <h2>Interested in working together?</h2>
+                <p>Let's build something great.</p>
+                <div class="hero-buttons" style="justify-content: center;">
+                    <a href="#contact" class="btn btn-primary" style="background: white; color: var(--accent-color);">Contact Me</a>
+                    <a href="#" class="btn btn-secondary" style="border-color: white; color: white;">Download Resume</a>
+                </div>
+            </section>
+
+            <!-- SECTION 10: CONTACT PREVIEW -->
+            <section id="contact" class="section reveal">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="grid-3">
+                    <div class="card-glass skill-card">
+                        <ion-icon name="mail-outline" class="skill-icon-placeholder"></ion-icon>
+                        <h3>Email</h3>
+                        <p>placeholder@example.com</p>
+                    </div>
+                    <div class="card-glass skill-card">
+                        <ion-icon name="logo-linkedin" class="skill-icon-placeholder"></ion-icon>
+                        <h3>LinkedIn</h3>
+                        <p>LinkedIn Profile</p>
+                    </div>
+                    <div class="card-glass skill-card">
+                        <ion-icon name="logo-github" class="skill-icon-placeholder"></ion-icon>
+                        <h3>GitHub</h3>
+                        <p>GitHub Profile</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="/contact" class="btn btn-secondary">Contact Form</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="section" style="padding: 2rem 0; border-top: 1px solid var(--card-border);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <p>&copy; 2026 Portfolio Name. All rights reserved.</p>
+            <div style="display: flex; gap: 1rem; font-size: 1.5rem;">
+                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-github"></ion-icon>
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="card-glass" style="position: fixed; bottom: 30px; right: 30px; padding: 10px; border-radius: 50%; display: none; z-index: 1000;">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+</body>
+</html>
