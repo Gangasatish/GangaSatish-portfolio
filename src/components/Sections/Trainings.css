@@ -1,0 +1,228 @@
+/* Trainings.css - Premium Design for Featured Training */
+
+.trainings-container {
+  padding: 5rem 0;
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.featured-training-card {
+  max-width: 900px;
+  width: 95%;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border, rgba(255, 255, 255, 0.1));
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
+}
+
+[data-theme='light'] .featured-training-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(138, 73, 168, 0.15);
+  box-shadow: 0 15px 45px rgba(138, 73, 168, 0.1);
+}
+
+.featured-training-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--imp-text-color) 0%, transparent 60%);
+  opacity: 0.1;
+  pointer-events: none;
+  animation: glow-rotate 10s linear infinite;
+}
+
+@keyframes glow-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.featured-training-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border-color: var(--imp-text-color);
+}
+
+.training-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.training-icon-wrapper {
+  background: linear-gradient(135deg, var(--imp-text-color), var(--purple));
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: pulse-icon 2s infinite ease-in-out;
+}
+
+@keyframes pulse-icon {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.training-badge {
+  background: rgba(199, 112, 240, 0.15);
+  color: var(--imp-text-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(199, 112, 240, 0.3);
+}
+
+.training-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.training-provider {
+  font-size: 1.3rem;
+  color: var(--imp-text-color);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.training-description {
+  margin-top: 2rem;
+}
+
+.training-list {
+  list-style: none;
+  padding: 0;
+}
+
+.training-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.training-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--imp-text-color);
+  font-size: 1.2rem;
+}
+
+.training-footer {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.view-cert-btn {
+  padding: 1rem 3rem !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  border-radius: 50px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.view-cert-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.view-cert-btn:hover::before {
+  left: 100%;
+}
+
+/* Decorations for this page */
+.trainings-decor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.decor-blob {
+  position: absolute;
+  filter: blur(100px);
+  border-radius: 50%;
+  opacity: 0.15;
+}
+
+.blob-purple {
+  width: 400px;
+  height: 400px;
+  background: #c95bf5;
+  top: 10%;
+  left: -100px;
+}
+
+.blob-blue {
+  width: 300px;
+  height: 300px;
+  background: #6c63ff;
+  bottom: 10%;
+  right: -50px;
+}
+
+@media (max-width: 768px) {
+  .featured-training-card {
+    padding: 2rem;
+  }
+  
+  .training-title {
+    font-size: 1.6rem;
+  }
+  
+  .training-provider {
+    font-size: 1.1rem;
+  }
+  
+  .training-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
