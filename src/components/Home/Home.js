@@ -7,8 +7,6 @@ import Type from "./Type";
 import { Link } from "react-router-dom";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
   AiOutlineThunderbolt,
   AiOutlineFundProjectionScreen,
   AiOutlineTrophy,
@@ -16,7 +14,7 @@ import {
 import { FaLinkedinIn, FaChalkboardTeacher } from "react-icons/fa";
 import { IoMdSchool } from "react-icons/io";
 import { PiCertificate } from "react-icons/pi";
-import { MdOutlineMail } from "react-icons/md";
+
 
 function Home({ theme }) {
   useEffect(() => {
