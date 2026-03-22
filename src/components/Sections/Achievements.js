@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import Particle from "../Particle";
-import { FaTrophy, FaAward, FaLaptopCode, FaUsers } from "react-icons/fa";
+import { FaTrophy, FaLaptopCode, FaUsers } from "react-icons/fa";
 import { SiIbm } from "react-icons/si";
-import { PiMedalFill } from "react-icons/pi";
 import "./Achievements.css";
 
 function Achievements() {

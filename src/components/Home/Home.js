@@ -17,8 +17,6 @@ import { FiExternalLink } from "react-icons/fi";
 import bookstore from "../../Assets/Projects/bookstore.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import codeEditor from "../../Assets/Projects/codeEditor.png";
-import naturanet from "../../Assets/Projects/naturanet.png";
-import awsConsole from "../../Assets/Projects/aws-console.png";
 
 
 function Home({ theme }) {
