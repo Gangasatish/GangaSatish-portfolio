@@ -22,13 +22,13 @@ function ResumeNew() {
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
-            variant="primary"
+            className="hero-btn hero-btn-primary d-flex align-items-center justify-content-center"
             href={pdf}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
-            <AiOutlineDownload />
-            &nbsp;Download CV
+            <AiOutlineDownload style={{ fontSize: "1.2em", marginRight: "5px" }} />
+            Download CV
           </Button>
         </Row>
 
@@ -40,13 +40,13 @@ function ResumeNew() {
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
-            variant="primary"
+            className="hero-btn hero-btn-primary d-flex align-items-center justify-content-center"
             href={pdf}
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
-            <AiOutlineDownload />
-            &nbsp;Download CV
+            <AiOutlineDownload style={{ fontSize: "1.2em", marginRight: "5px" }} />
+            Download CV
           </Button>
         </Row>
       </Container>

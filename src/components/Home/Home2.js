@@ -38,11 +38,6 @@ function Home2({ theme }) {
                 <b className="purple">Next.js</b>.
               </i>
             </p>
-            <div style={{ padding: "20px 0", textAlign: "left" }}>
-              <Button as={Link} to="/about" variant="outline-primary" className="btn-secondary">
-                Read More
-              </Button>
-            </div>
           </Col>
           <Col md={4} className="myAvtar text-center">
             <Tilt>

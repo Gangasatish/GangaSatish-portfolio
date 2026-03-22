@@ -49,11 +49,7 @@ function Education() {
       <Container fluid className="project-section">
         <Particle />
         <div className="light-mode-decorations">
-          <div className="deco-shape deco-bunting bunting-1">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="deco-flag" />
-            ))}
-          </div>
+
           <div className="deco-shape deco-abstract-blob blob-3"></div>
           <div className="deco-shape circle-red"></div>
           <div className="deco-shape circle-blue"></div>

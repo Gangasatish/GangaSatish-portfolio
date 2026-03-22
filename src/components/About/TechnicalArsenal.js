@@ -55,14 +55,12 @@ const skillsData = [
   { name: "VS Code", icon: <img src={VSCodeIcon} alt="VS Code" />, category: "Tools", progress: 95 },
 ];
 
-const categories = ["All Skills", "ProgrammingLanguages", "Frontend", "Backend", "Databases", "Tools"];
+const categories = ["ProgrammingLanguages", "Frontend", "Backend", "Databases", "Tools"];
 
 function TechnicalArsenal() {
-  const [activeTab, setActiveTab] = useState("All Skills");
+  const [activeTab, setActiveTab] = useState("ProgrammingLanguages");
 
-  const filteredSkills = activeTab === "All Skills" 
-    ? skillsData 
-    : skillsData.filter(skill => skill.category === activeTab);
+  const filteredSkills = skillsData.filter(skill => skill.category === activeTab);
 
   return (
     <Container fluid className="technical-arsenal-section">

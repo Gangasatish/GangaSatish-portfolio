@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
-  AiOutlineUser,
   AiOutlineThunderbolt,
   AiOutlineTrophy,
   AiOutlineMail,
@@ -19,10 +18,8 @@ import {
 import { CgFileDocument } from "react-icons/cg";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { IoMdSchool } from "react-icons/io";
-import { HiOutlineDotsVertical } from "react-icons/hi";
 import { PiCertificate } from "react-icons/pi";
 import { FaChalkboardTeacher } from "react-icons/fa";
-import NavDropdown from "react-bootstrap/NavDropdown";
 
 function NavBar({ theme, toggleTheme }) {
   const [expand, updateExpanded] = useState(false);
@@ -46,8 +43,10 @@ function NavBar({ theme, toggleTheme }) {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+        <Navbar.Brand href="/" className="d-flex custom-logo-container">
+          <span className="logo-letter logo-g">G</span>
+          <span className="logo-letter logo-s">S</span>
+          <span className="logo-dot">.</span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -62,14 +61,20 @@ function NavBar({ theme, toggleTheme }) {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)} className="nav-link-custom">
+                <div className="nav-icon-wrapper">
+                  <AiOutlineHome className="nav-icon" />
+                </div>
+                <span className="nav-text">Home</span>
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link as={Link} to="/skills" onClick={() => updateExpanded(false)}>
-                <AiOutlineThunderbolt style={{ marginBottom: "2px" }} /> Skills
+              <Nav.Link as={Link} to="/skills" onClick={() => updateExpanded(false)} className="nav-link-custom">
+                <div className="nav-icon-wrapper">
+                  <AiOutlineThunderbolt className="nav-icon" />
+                </div>
+                <span className="nav-text">Skills</span>
               </Nav.Link>
             </Nav.Item>
 
@@ -78,11 +83,12 @@ function NavBar({ theme, toggleTheme }) {
                 as={Link}
                 to="/project"
                 onClick={() => updateExpanded(false)}
+                className="nav-link-custom"
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
+                <div className="nav-icon-wrapper">
+                  <AiOutlineFundProjectionScreen className="nav-icon" />
+                </div>
+                <span className="nav-text">Projects</span>
               </Nav.Link>
             </Nav.Item>
 
@@ -91,8 +97,12 @@ function NavBar({ theme, toggleTheme }) {
                 as={Link}
                 to="/resume"
                 onClick={() => updateExpanded(false)}
+                className="nav-link-custom"
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <div className="nav-icon-wrapper">
+                  <CgFileDocument className="nav-icon" />
+                </div>
+                <span className="nav-text">Resume</span>
               </Nav.Link>
             </Nav.Item>
 
@@ -101,8 +111,12 @@ function NavBar({ theme, toggleTheme }) {
                 as={Link}
                 to="/education"
                 onClick={() => updateExpanded(false)}
+                className="nav-link-custom"
               >
-                <IoMdSchool style={{ marginBottom: "2px" }} /> Education
+                <div className="nav-icon-wrapper">
+                  <IoMdSchool className="nav-icon" />
+                </div>
+                <span className="nav-text">Education</span>
               </Nav.Link>
             </Nav.Item>
 
@@ -111,8 +125,12 @@ function NavBar({ theme, toggleTheme }) {
                 as={Link}
                 to="/certificates"
                 onClick={() => updateExpanded(false)}
+                className="nav-link-custom"
               >
-                <PiCertificate style={{ marginBottom: "2px" }} /> Certificates
+                 <div className="nav-icon-wrapper">
+                   <PiCertificate className="nav-icon" />
+                 </div>
+                 <span className="nav-text">Certificates</span>
               </Nav.Link>
             </Nav.Item>
 
@@ -121,8 +139,12 @@ function NavBar({ theme, toggleTheme }) {
                 as={Link}
                 to="/achievements"
                 onClick={() => updateExpanded(false)}
+                className="nav-link-custom"
               >
-                <AiOutlineTrophy style={{ marginBottom: "2px" }} /> Achievements
+                <div className="nav-icon-wrapper">
+                  <AiOutlineTrophy className="nav-icon" />
+                </div>
+                <span className="nav-text">Achievements</span>
               </Nav.Link>
             </Nav.Item>
 
@@ -131,41 +153,39 @@ function NavBar({ theme, toggleTheme }) {
                 as={Link}
                 to="/trainings"
                 onClick={() => updateExpanded(false)}
+                className="nav-link-custom"
               >
-                <FaChalkboardTeacher style={{ marginBottom: "2px" }} /> Trainings
+                <div className="nav-icon-wrapper">
+                  <FaChalkboardTeacher className="nav-icon" />
+                </div>
+                <span className="nav-text">Trainings</span>
               </Nav.Link>
             </Nav.Item>
 
-            <NavDropdown
-              title={<HiOutlineDotsVertical style={{ fontSize: "1.2rem" }} />}
-              id="collasible-nav-dropdown"
-              className="navbar-dropdown"
-            >
-              <NavDropdown.Item as={Link} to="/about" onClick={() => updateExpanded(false)}>
-                <AiOutlineUser style={{ marginRight: "10px" }} /> About
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/contact" onClick={() => updateExpanded(false)}>
-                <AiOutlineMail style={{ marginRight: "10px" }} /> Contact
-              </NavDropdown.Item>
-            </NavDropdown>
-
-            <Nav.Item style={{ marginLeft: "15px", display: "flex", alignItems: "center" }}>
-              <Button
-                onClick={toggleTheme}
-                variant="outline-primary"
-                style={{
-                  borderRadius: "50%",
-                  width: "40px",
-                  height: "40px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  padding: "0"
-                }}
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/contact"
+                onClick={() => updateExpanded(false)}
+                className="nav-link-custom"
               >
-                {theme === "dark" ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
-              </Button>
+                <div className="nav-icon-wrapper">
+                  <AiOutlineMail className="nav-icon" />
+                </div>
+                <span className="nav-text">Contact</span>
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item style={{ display: "flex", alignItems: "center" }}>
+              <div aria-label="Toggle Theme" className={`theme-toggle-switch ${theme}`} onClick={toggleTheme}>
+                <div className="switch-bg-icons">
+                   <BsFillMoonStarsFill className="bg-icon moon" />
+                   <BsFillSunFill className="bg-icon sun" />
+                </div>
+                <div className="toggle-knob">
+                  {theme === "dark" ? <BsFillMoonStarsFill className="knob-icon moon" /> : <BsFillSunFill className="knob-icon sun" />}
+                </div>
+              </div>
             </Nav.Item>
 
           </Nav>
