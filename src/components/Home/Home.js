@@ -7,10 +7,9 @@ import Type from "./Type";
 import { Link } from "react-router-dom";
 import {
   AiFillGithub,
-  AiOutlineFundProjectionScreen,
   AiOutlineTrophy,
 } from "react-icons/ai";
-import { FaLinkedinIn, FaChalkboardTeacher, FaReact, FaNodeJs, FaAws, FaProjectDiagram, FaDatabase, FaBook, FaChartLine, FaMicrochip } from "react-icons/fa";
+import { FaLinkedinIn, FaChalkboardTeacher, FaReact, FaNodeJs, FaAws, FaProjectDiagram, FaDatabase } from "react-icons/fa";
 import { IoMdSchool } from "react-icons/io";
 import { PiCertificate } from "react-icons/pi";
 import { FiExternalLink } from "react-icons/fi";
